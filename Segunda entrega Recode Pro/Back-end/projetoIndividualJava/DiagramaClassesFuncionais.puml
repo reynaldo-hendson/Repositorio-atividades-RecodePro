@@ -1,0 +1,25 @@
+@startuml
+class utils.ClienteIO {
++ {static} String readIdOfClientCpf(Scanner)
++ void printClients(List<Cliente>)
++ {static} void ClientIo(Scanner)
+}
+class utils.PedidoIO {
++ {static} int readIdOfPedido(Scanner)
++ void printPedidos(List<Pedido>)
++ {static} void pedidoIo(Scanner)
+}
+class utils.ProdutoIO {
++ {static} int readIdOfProduto(Scanner)
++ void printProduto(List<Produto>)
++ {static} void produtoIo(Scanner)
+}
+class utils.AdminIO {
++ {static} void menuAdminIo(Scanner)
+}
+class utils.ItensPedidoIO {
++ {static} int readIdOfItem(Scanner)
++ void printItem(List<ItensPedido>)
++ {static} void itemPedidoIo(Scanner)
+}
+@enduml

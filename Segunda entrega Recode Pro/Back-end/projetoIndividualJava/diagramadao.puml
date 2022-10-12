@@ -1,0 +1,33 @@
+@startuml
+class dao.ItensPedidoDao {
+- Connection connection
++ void create(ItensPedido)
++ void update(ItensPedido)
++ void removeById(int)
++ List<ItensPedido> findByPk(int)
++ List<ItensPedido> findAll()
+}
+class dao.ClienteDao {
+- Connection connection
++ void create(Cliente)
++ void update(Cliente)
++ void removeById(int)
++ ResultSet getClientes()
++ List<Cliente> findByPk(String)
+}
+class dao.PedidoDao {
+- Connection connection
++ void create(Pedido)
++ void update(Pedido)
++ void removeById(int)
++ List<Pedido> findByPk(int)
++ List<Pedido> findAll()
+}
+class dao.ProdutoDao {
+- Connection connection
++ void create(Produto)
++ void update(Produto)
++ void removeById(int)
++ List<Produto> findAll()
+}
+@enduml

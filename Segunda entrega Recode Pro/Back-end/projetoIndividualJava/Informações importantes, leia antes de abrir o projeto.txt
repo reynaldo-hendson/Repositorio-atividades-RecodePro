@@ -1,0 +1,6 @@
+Projeto back-end feito no IntelliJ;
+
+Para acessar o menu Admnistrador precisa digitar login e senha;
+
+login: admin
+senha: admin
