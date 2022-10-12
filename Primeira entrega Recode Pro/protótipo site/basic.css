@@ -1,0 +1,472 @@
+html body{
+    margin: 0;
+    padding: 0;
+    background-color: #f7f3fa;
+    color: #071c35;
+    font-size: 16px;
+    font-family:'minhafont', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+#logoNav{
+  background: #414b4f;
+  width: 200px;
+}
+
+#navHeader{
+  background: rgb(245, 241, 241);
+  height: 100px;
+}
+
+.navbar-nav > li > a{
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease 0s;
+  display: block;
+}
+
+.navbar-nav > li > a:hover{
+  color:#cb6a02;  
+}
+
+.page-banner-content .title{
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.page-banner-content .p{
+    font-size: 18px;
+    line-height: 2;
+    color: #dbdbdb;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+
+#formPesquisa{
+  background: rgb(243, 243, 243);
+  box-sizing: border-box;
+  color: #071c35;
+  display: block;
+  padding: 0 30 30 30;
+  margin-top: 45px;
+  font-size: 16px;
+  font-weight: 400;
+  height: 180px;
+  line-height: 24px;
+  opacity: 1;
+  text-size-adjust: 100%;
+  transform: matrix(1,0,0,1,0);
+  transition-duration: 1.2s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  visibility: visible;
+
+}
+
+#formRow{
+  padding: 50px;
+}
+.button {
+  display: inline-block;
+  border-radius: 20px 100px 20px 100px;
+  background-color: #cb6a02;
+  border: none;
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  height: 50px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 25px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+ 
+}
+
+.button:hover span {
+  padding-right: 25px;
+  
+  
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+  
+}
+
+.page-banner {
+  height: 600px;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.section page-banner{
+  align-items: center;
+   background-image: url(/img/imgLogo/bannerjp.jpg);
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  color: #f3f3f3;
+  display: flex;
+  float: left;
+  font-size: 16px;
+  font-weight: 400;
+  height: 340px;
+  line-height: 24px;
+  position: relative;
+  text-size-adjust: 100px;
+  visibility: visible;
+  width: 315px;
+  z-index: 1;
+  
+
+}
+
+.page-banner-content{
+  box-sizing: border-box;
+  color: #f3f3f3;
+  display: block;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size:20px;
+  font-weight: 400;
+  height: 150px;
+  line-height: 24px;
+  padding-top: 10px;
+  text-size-adjust: 100%;
+  visibility: visible;
+  width: 285px;
+
+}
+.titleBanner{
+  box-sizing: border-box;
+  color: #f3f3f3;
+  display: block;
+  font-size: 60px;
+  font-weight: 700;
+  height: 60px;
+  line-height: 48px;
+  margin-block-end: 8px;
+  margin-block-start: 0px;
+  margin-bottom: 8px;
+  margin-inline-end: 0px;
+  margin-inline-start: 0px;
+  text-size-adjust: 100%;
+  visibility: visible;
+  width: 285px;
+  -webkit-tap-highlight-color: #f3f3f3;
+
+}
+
+.page-banner-content .breadcrumb li {
+  color: #cb6a02;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+}
+
+.page-banner-content .breadcrumb li a {
+  color: #fff;
+  text-decoration: none;
+  
+}
+
+.page-banner-content .breadcrumb li a:hover {
+  color: #cb6a02;
+
+}
+
+      
+.fundo{
+   background-color: #f7f3fa;
+   height: 97%;
+   border-radius: 15px;
+   padding: 10px;
+}
+
+.desconto{
+   color: #cb6a02;
+}
+
+#duvidas{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#duvidasTitulo{
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #cb6a02;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 3px;
+}
+
+#duvidas{
+  text-align: justify;
+}
+
+#promocoes{
+  margin: 10px;
+  margin-top: 10px;
+}
+
+.cardPreco{
+  color: #ff5a00;
+}
+
+.carousel-caption{
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+ 
+}
+
+.carousel-caption .sl-title{
+    font-size: 100px;
+    line-height: 1;
+    letter-spacing: 4px;
+}
+
+#cardGreat{
+  margin: 10px;
+
+
+}
+#card-destino{
+  padding: 10px;
+}
+
+
+#linha{
+  border: 1px solid #fe8403;
+  margin: 20px;
+}
+
+#contato{
+  margin: 10px
+}
+
+.title-footer{
+  color: #fe8403;
+
+}
+
+.copyright-text p span {
+  color: #fe8403;
+  text-transform: uppercase;
+}
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.copyright-text p {
+  color: #c4c4c4;
+  font-size: 16px;
+  font-weight: 400;
+}
+p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.copyright-text {
+  text-align: center;
+  padding: 20px 0;
+}
+.subTitle{
+  font-size: 60px;
+  margin-bottom: 0;
+  color: #071c35;
+  margin-top: 35px;
+  
+}
+.titleOrange{
+  padding-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #cb6a02;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 3px;
+}
+.itens{
+  box-sizing: border-box;
+  padding: 50px;
+  color:#071c35
+}
+
+.nav > li > a{
+  color:#f7f3fa;
+}
+.nav > li > a:hover{
+  color:#ffb300;  
+}
+.content-wrapper{
+  
+  background: #efeeff52;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.content-wrapper .title {
+  margin-top: 10px;
+  font-size: 35px;
+  color: #071c35;
+  margin-top: 32px;
+}
+.content-wrapper .sobreP {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  text-align: justify;
+
+}
+.content-img{
+  background-size: cover;
+  background-position: center center;
+  min-height: 555px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.content-img img{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10%;
+  -webkit-box-shadow: 0px 10px 23px 0px rgb(0 0 0 / 2%);
+  box-shadow: 0px 10px 23px 0px rgb(0 0 0 / 2%);
+  max-width: 100%;
+  vertical-align: middle;
+}
+.content-wrapper .image-content p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 0;
+  margin-top: 8px;
+  display: block;
+  
+}
+#imgSobre{
+  height: 462px;
+  width: 555px;
+}
+#time{
+  margin: 20px;
+}
+
+.container-termos{
+  margin-top: 100px;
+  margin-right: 20%;
+  margin-left: 20%;
+
+}
+#title-termos{
+  text-align: center;
+}
+
+.container-termos p{
+  text-align: justify;
+  font-size: 16px;
+}
+
+#container-duvidas{
+  
+  color: #c4c4c4;
+  margin-top: 80px;
+  margin-bottom: 10px;
+  height: 200px;
+}
+#container-duvidas h2{
+  color:#071c35;
+  font-size:40px;
+  padding-top: 10%;               
+  padding-left:10%;                         
+}
+#section-collapse{
+  margin:20px;
+}
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #eee;
+
+}
+.collapsible:after {
+  content: '>'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #cb6a02;
+  float: right;
+  margin-left: 5px;
+}
+
+.buttonFooter {
+  display: inline-block;
+  border-radius: 20px 100px 20px 100px;
+  background-color: #cb6a02;
+  border: none;
+  color: #f3f3f3;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  margin: 25px;
+}
+
+
