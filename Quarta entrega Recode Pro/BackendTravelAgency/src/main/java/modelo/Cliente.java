@@ -1,4 +1,4 @@
-package model;
+package modelo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +13,7 @@ public class Cliente {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private int id;
 	
 	@Column(name = "nome")
 	private String nome;
@@ -34,7 +34,7 @@ public class Cliente {
 		
 	}
 	
-	public Cliente(long id, String nome, String cpf, String email, String endereco, String cidade,
+	public Cliente(int id, String nome, String cpf, String email, String endereco, String cidade,
 			String uf, String cep) {
 		super();
 		this.id = id;

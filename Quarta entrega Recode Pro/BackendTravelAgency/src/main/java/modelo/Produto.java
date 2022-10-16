@@ -1,4 +1,4 @@
-package model;
+package modelo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +13,7 @@ public class Produto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long idProduto;
+    private int idProduto;
 
     @Column(name="descricao")
     private String descricao;
@@ -24,7 +24,7 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(long idProduto, String descricao, String valor) {
+    public Produto(int idProduto, String descricao, String valor) {
         this.idProduto = idProduto;
         this.descricao = descricao;
         this.valor = valor;

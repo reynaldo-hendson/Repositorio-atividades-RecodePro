@@ -1,4 +1,4 @@
-package model;
+package modelo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,10 +14,10 @@ public class Pedido {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private int id;
 
 	@Column(name="idCliente")
-	private long idCliente;
+	private int idCliente;
 
 	@Column(name="dataPedido")
 	private String dataPedido;
@@ -28,7 +28,7 @@ public class Pedido {
 	public Pedido() {
 	}
 
-	public Pedido(long id, long idCliente, String dataPedido, String dataViagem) {
+	public Pedido(int id, int idCliente, String dataPedido, String dataViagem) {
 		this.id = id;
 		this.idCliente = idCliente;
 		this.dataPedido = dataPedido;

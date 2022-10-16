@@ -1,12 +1,12 @@
 package controller;
 
 
-import exception.ResourceNotFoundException;
-import model.Cliente;
+import excecao.ResourceNotFoundException;
+import modelo.Cliente;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import repository.ClienteRepository;
+import repo.ClienteRepository;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,32 +14,32 @@ import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
-@RequestMapping("/api/v1/")
+@RequestMapping("/clientes")
 public class ClienteController {
     @Autowired
     private ClienteRepository clienteRepository;
 
     //Search all Clients
-    @GetMapping("/clientes")
+    @GetMapping("/lista")
     public List<Cliente> getAllClientes(){
         return clienteRepository.findAll();
     }
 
     //Search client for Id.
-    @GetMapping("/clientes/{id}")
+    @GetMapping("/listar/{id}")
     private ResponseEntity<Cliente> getClienteById(@PathVariable Long id){
         Cliente cliente = clienteRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Cliente não existe"+id));
         return ResponseEntity.ok(cliente);
     }
 
     //Create new client
-    @PostMapping("/clientes")
+    @PostMapping("/cadastrar")
     public Cliente createCliente(@RequestBody Cliente cliente) {
         return clienteRepository.save(cliente);
     }
 
     //Alter Client
-    @PutMapping("/clientes/{id}")
+    @PutMapping("/alterar/{id}")
     public ResponseEntity<Cliente> updateCliente(@PathVariable Long id, @RequestBody Cliente clienteDetails) {
         Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cliente nao existe com id :" + id));
 
@@ -56,7 +56,7 @@ public class ClienteController {
     }
 
     //Delete Client
-    @DeleteMapping("/clientes/{id}")
+    @DeleteMapping("/remover/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteCliente (@PathVariable Long id) {
         Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cliente nao existe com id :" + id));
         clienteRepository.delete(cliente);
