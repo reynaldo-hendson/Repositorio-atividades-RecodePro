@@ -1,0 +1,68 @@
+package controller;
+
+
+import exception.ResourceNotFoundException;
+import model.Cliente;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import repository.ClienteRepository;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@CrossOrigin(origins = "http://localhost:3000")
+@RestController
+@RequestMapping("/api/v1/")
+public class ClienteController {
+    @Autowired
+    private ClienteRepository clienteRepository;
+
+    //Search all Clients
+    @GetMapping("/clientes")
+    public List<Cliente> getAllClientes(){
+        return clienteRepository.findAll();
+    }
+
+    //Search client for Id.
+    @GetMapping("/clientes/{id}")
+    private ResponseEntity<Cliente> getClienteById(@PathVariable Long id){
+        Cliente cliente = clienteRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Cliente não existe"+id));
+        return ResponseEntity.ok(cliente);
+    }
+
+    //Create new client
+    @PostMapping("/clientes")
+    public Cliente createCliente(@RequestBody Cliente cliente) {
+        return clienteRepository.save(cliente);
+    }
+
+    //Alter Client
+    @PutMapping("/clientes/{id}")
+    public ResponseEntity<Cliente> updateCliente(@PathVariable Long id, @RequestBody Cliente clienteDetails) {
+        Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cliente nao existe com id :" + id));
+
+        cliente.setNome(clienteDetails.getNome());
+        cliente.setCpf(clienteDetails.getCpf());
+        cliente.setEmail(clienteDetails.getEmail());
+        cliente.setEndereco(clienteDetails.getEndereco());
+        cliente.setCidade(clienteDetails.getCidade());
+        cliente.setUf(clienteDetails.getUf());
+        cliente.setCep(clienteDetails.getCep());
+
+        Cliente updatedCliente = clienteRepository.save(cliente);
+        return ResponseEntity.ok(updatedCliente);
+    }
+
+    //Delete Client
+    @DeleteMapping("/clientes/{id}")
+    public ResponseEntity<Map<String, Boolean>> deleteCliente (@PathVariable Long id) {
+        Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cliente nao existe com id :" + id));
+        clienteRepository.delete(cliente);
+        Map<String, Boolean> response = new HashMap<>();
+        response.put("deletado", Boolean.TRUE);
+        return ResponseEntity.ok(response);
+    }
+
+}
